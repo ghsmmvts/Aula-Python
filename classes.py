@@ -4,8 +4,11 @@ class Carta():
         self.rank = rank
         self.valor = valor
 
+    # def __str__(self):
+    #     return self.rank + ' de ' +  '['+str(self.valor) +']'
+    
     def __str__(self):
-        return self.rank + ' de ' +  '['+str(self.valor) +']'
+        return f'{self.rank} de {self.naipe} [{self.valor}]'
 
 class Baralho():
     def __init__(self):
@@ -21,7 +24,7 @@ class Baralho():
             string += str(carta)
             string += ', '
 
-            return string
+        return string
 
     def adicionar_carta(self, carta):
         self.cartas.append(carta)
