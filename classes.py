@@ -1,3 +1,6 @@
+NAIPES = ('Paus', 'Copas', 'Espadas', 'Ouros')
+RANKS = ('Ás', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Valete', 'Damas', 'Reis')
+
 class Carta():
     def __init__(self, naipe, rank, valor):
         self.naipe = naipe
@@ -8,6 +11,7 @@ class Carta():
     #     return self.rank + ' de ' +  '['+str(self.valor) +']'
     
     def __str__(self):
+        # f no caso é uma Template String
         return f'{self.rank} de {self.naipe} [{self.valor}]'
 
 class Baralho():
