@@ -1,5 +1,6 @@
+# TUPLA
 NAIPES = ('Paus', 'Copas', 'Espadas', 'Ouros')
-RANKS = ('Ás', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Valete', 'Damas', 'Reis')
+RANKS = ('Ás', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Valete', 'Damas', 'Rei')
 
 class Carta():
     def __init__(self, naipe, rank, valor):
@@ -17,6 +18,12 @@ class Carta():
 class Baralho():
     def __init__(self):
         self.cartas = []
+ 
+        # Adicionar a Tupla no baralho
+        for naipe in NAIPES:
+            for rank in RANKS:
+                carta = Carta(naipe, rank, 1)
+                self.adicionar_carta(carta)
 
     def __str__(self):
         if len(self.cartas) == 0:
