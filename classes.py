@@ -1,22 +1,22 @@
-# from random
+from random import randint 
 
 # TUPLA
 NAIPES = ('Paus', 'Copas', 'Espadas', 'Ouros')
 RANKS = (
     # Criar tuplas entre tuplas
-    ('Ás', 1)
-    ('Dois', 2)
-    ('Três', 3)
-    ('Quatro', 4)
-    ('Cinco', 5)
-    ('Seis', 6) 
-    ('Sete', 7) 
-    ('Oito', 8)
-    ('Nove', 9)
-    ('Dez', 10)
-    ('Valete', 10)
-    ('Damas', 10)
-    ('Rei', 10)
+  ('Ás', 1), 
+  ('Dois', 2), 
+  ('Três', 3), 
+  ('Quatro', 4), 
+  ('Cinco', 5), 
+  ('Seis', 6), 
+  ('Sete', 7), 
+  ('Oito', 8), 
+  ('Nove', 9), 
+  ('Dez', 10),
+  ('Valete', 10), 
+  ('Dama', 10), 
+  ('Rei', 10)
 )
 
 class Carta():
@@ -59,3 +59,15 @@ class Baralho():
 
     def remover_carta(self):
         return self.cartas.pop()
+
+    def sortear(self):
+        numero_sorteado = randint(0, len(self.cartas)-1)
+        return self.cartas.pop(numero_sorteado)
+
+class Jogo21()
+    def __init__():
+        baralho = Baralho()
+        carta1 = baralho.sortear()
+        carta2 = baralho.sortear()
+
+        sef.pontuacao = carta1.pontuacao + carta2.pontuacao
