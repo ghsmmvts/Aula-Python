@@ -1,6 +1,23 @@
+# from random
+
 # TUPLA
 NAIPES = ('Paus', 'Copas', 'Espadas', 'Ouros')
-RANKS = ('Ás', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Valete', 'Damas', 'Rei')
+RANKS = (
+    # Criar tuplas entre tuplas
+    ('Ás', 1)
+    ('Dois', 2)
+    ('Três', 3)
+    ('Quatro', 4)
+    ('Cinco', 5)
+    ('Seis', 6) 
+    ('Sete', 7) 
+    ('Oito', 8)
+    ('Nove', 9)
+    ('Dez', 10)
+    ('Valete', 10)
+    ('Damas', 10)
+    ('Rei', 10)
+)
 
 class Carta():
     def __init__(self, naipe, rank, valor):
@@ -22,7 +39,7 @@ class Baralho():
         # Adicionar a Tupla no baralho
         for naipe in NAIPES:
             for rank in RANKS:
-                carta = Carta(naipe, rank, 1)
+                carta = Carta(naipe, rank[0], rank[1])
                 self.adicionar_carta(carta)
 
     def __str__(self):
